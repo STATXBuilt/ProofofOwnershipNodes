@@ -1,0 +1,46 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build / Dist folders
+dist/
+build/
+out/
+
+# Solidity / Hardhat / Truffle
+artifacts/
+cache/
+coverage/
+*.dbg.json
+*.tsbuildinfo
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS / System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# NPM / Yarn lock files (optional, depending on project)
+package-lock.json
+yarn.lock
