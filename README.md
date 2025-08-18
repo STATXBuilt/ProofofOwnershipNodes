@@ -20,14 +20,19 @@ networks or services without prior written consent.
 ---
 
 ## Contracts
+import { CONTRACT_ADDRESS, CONTRACT_ABI } from "./config";
+import { ethers } from "ethers";
 
-The canonical Proof-of-Ownership contracts are already deployed on-chain.  
-This repo references them — do not redeploy.  
+async function connectContract() {
+  if (window.ethereum) {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    return new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+  } else {
+    alert("Please install MetaMask!");
+  }
+}
 
-Contract Address (example):  
-`0xYourCanonicalContractAddressHere`
-
----
 
 ## Quick Start
 
